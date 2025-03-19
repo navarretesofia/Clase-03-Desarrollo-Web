@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+             <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+
+        <title>Datos e información en gráficas</title>
+
+
+        <style>
+            body {
+                font-family: 'Montserrat', sans-serif;
+                text-align: center;
+            }
+            div {
+                margin: 2vh 25vw 5vh 25vw;
+            }
+
+            @media (orientation: portrait) {
+                div {
+                    margin: 2vh 2vw 3vh 2vw;
+                }
+            }
+
+            div > svg {
+                margin: 1rem;
+            }
+
+            div > p {
+                margin: 1rem;
+            }
+
+            svg#personas{margin:1vh 8vw;}
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <svg viewBox="0 0 100 100">
+                <defs>
+                    <clipPath id="flor">
+                        <path
+                          d="M91.7,94.34H86.16a4,4,0,0,1-3.69-2.7L74.85,70.85,69.93,70l-.74,5.9a3.19,3.19,0,0,1-3.08,3h-13L51,72.45H61.32l.61-3.82L53.69,67c-2.95-.62-3.69-4.31-1.84-6.89L55,55.84a22.88,22.88,0,0,0,4.06-9l3.45-16c-3.32,0-5.91,3-6.89,7.75l-1.72,8.24a3.13,3.13,0,0,1-3.08,2.83h-.12a9.47,9.47,0,0,1-2.59-.49L42.5,47.48,41.27,55.1,55.53,94.34H49.88a4.42,4.42,0,0,1-3.69-2.7L33.89,60.52h-2V75.77a3,3,0,0,1-3.08,3H8.3V74.91a2.83,2.83,0,0,1,3.08-2.71H23.8V56.33a17.22,17.22,0,0,1,.37-3.56l4.67-21.9c-3.32,0-6,3-7,7.75l-1.72,8.24A3.12,3.12,0,0,1,17,49.69a3.22,3.22,0,0,1-3-4.06l1.73-8C17.9,28,23.43,23.86,34.38,23.86c7.26,0,11.56,3.32,10.21,11.2l-1,5.78,5,1.47,1-4.67c2.09-9.47,7.63-13.78,18.45-13.78,6.27,0,11.69,3.32,10.09,11.2l-1.48,6.76,12.06,3.32a3.4,3.4,0,0,1,2.58,3.2,3.3,3.3,0,0,1-3.08,3.44,9.47,9.47,0,0,1-2.58-.49l-9.35-2.7ZM34.62,19.56c-.73-1.48-1.1-6.52-1.1-9.47a3,3,0,0,1,.74-2.46,6.82,6.82,0,0,1,9.59,0c.62.49.62,1.35.62,2.7,0,2.95-.25,7.75-.87,9.23-.37.61-1.84,1.6-4.55,1.6C36.59,21.16,35,20.17,34.62,19.56Zm32.6.37c-.74-1.48-1.11-6.65-1.11-9.72A2.71,2.71,0,0,1,67,7.75a6.83,6.83,0,0,1,9.84,0c.5.49.5,1.23.5,2.71,0,3.07-.13,8-.87,9.47-.36.73-1.84,1.72-4.55,1.72S67.59,20.66,67.22,19.93Z"></path>
+
+                        
+                    </clipPath>
+                </defs>
+                <image height="100%" width="100%" preserveAspectRatio="xMinYMin slice" xlink:href="fondo.jpg" clip-path="url(#flor)" />
+            </svg>
+
+            <p>
+                Usando <a href="https://www.guemil.info/" target="_blank">Guemil</a> para una doble representación; el <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths" target="_blank">path</a> que recorta es una
+                representación y la <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/image" target="_blank">image</a> recortada es otra.
+            </p>
+
+            <svg viewBox="0 0 42 42">
+                <circle cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>
+                <circle cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#eff5e0" stroke-width="2"></circle>
+                <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#a7c957" stroke-width="2" stroke-dasharray="73 27" stroke-dashoffset="25"></circle>
+                <text x="50%" y="29" dominant-baseline="middle" text-anchor="middle" font-weight="bold" font-size="6" fill="#a7c957">73%</text>
+                <image x="15" y="10" width="12" height="12" xlink:href="https://raw.githubusercontent.com/Guemil/Guemil_Icons_v15_2020/main/svg/08_Evacuate_v15.svg"></image>
+            </svg>
+
+            <p>
+                Entre las personas consultadas, un 73% refiere a la semejanza de lo visto con una señal de evacuación ya vista (lo que se está representando). El dato de éxito de la referencia también se podría presentar, si se aproxima a
+                7 en 10, como sigue:
+            </p>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 24" id="personas"></svg>
+
+            <p>En la presentación gráfica del dato de 7 en 10 se utilizó un <a href="https://datavizcatalogue.com/ES/metodos/grafico_de_pictogramas.html" target="_blank">Gráfico de pictogramas</a></p>
+        </div>
+        <script>
+            for (let x = 0; x < 10; x++) {
+                if (x < 7) {
+                    document.querySelector("#personas").innerHTML += ` <g  transform ="translate(${x * 24} 0)"
+                fill="none" stroke="#a7c957" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" >
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="8.5" cy="7" r="4"></circle>
+                    <polyline points="17 11 19 13 23 9"></polyline>/><g/>`;
+
+
+
+                } else {
+                    document.querySelector("#personas").innerHTML += ` <g  transform ="translate(${x * 24} 0)" fill="none" stroke="#eff5e0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="8.5" cy="7" r="4"></circle>
+                    <line x1="18" y1="8" x2="23" y2="13">
+                    </line><line x1="23" y1="8" x2="18" y2="13"></line>/><g/>`;
+                }
+            }
+        </script>
+    </body>
+</html>
